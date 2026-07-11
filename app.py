@@ -6,7 +6,7 @@ import plotly.express as px
 import os
 
 # --- 1. KONFIGURASI HALAMAN ---
-st.set_page_config(page_title="VSD & Pump Dashboard", page_icon="⚡", layout="wide")
+st.set_page_config(page_title="H5 File converter", page_icon="⚡", layout="wide")
 
 st.markdown("""
     <style>
