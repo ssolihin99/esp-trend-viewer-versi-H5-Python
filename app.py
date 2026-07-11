@@ -147,10 +147,11 @@ if uploaded_file is not None:
                         fig.add_annotation(
                             text="© ssolihin99@gmail.com",
                             xref="paper", yref="paper",
-                            x=0.99, y=0.01,  # Posisi: kanan bawah
+                            x=0.5, y=0.5,  # Posisi: kanan bawah
                             showarrow=False,
-                            font=dict(size=14, color="rgba(255,255,255,2)"),  # Semi-transparent
-                            xanchor="right", yanchor="bottom"
+                            font=dict(size=14, color="rgba(100,100,100)"),  # Semi-transparent
+                            xanchor="center", yanchor="middle"
+                            opacity=0.2
                         )
                         
                         st.plotly_chart(fig, use_container_width=True)
