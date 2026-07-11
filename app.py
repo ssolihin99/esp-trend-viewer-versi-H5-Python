@@ -6,7 +6,7 @@ import plotly.express as px
 import os
 
 # --- 1. KONFIGURASI HALAMAN ---
-st.set_page_config(page_title="H5 File converter", page_icon="⚡", layout="wide")
+st.set_page_config(page_title="VSD & Pump Dashboard", page_icon="⚡", layout="wide")
 
 st.markdown("""
     <style>
@@ -35,7 +35,7 @@ with st.sidebar:
     uploaded_file = st.file_uploader("Upload File .h5", type=['h5', 'hdf5'])
 
 # --- 4. TAMPILAN UTAMA ---
-st.title("📊 H5 File Converter")
+st.title("📊 VSD & Pump Performance Dashboard")
 st.markdown("---")
 
 tab1, tab2 = st.tabs(["📈 Analisis Grafik Interaktif", "🗃️ Data Tabel & Download"])
@@ -142,6 +142,17 @@ if uploaded_file is not None:
                                       template="plotly_dark", 
                                       labels={"value": y_label, "time": "Waktu"})
                         fig.update_layout(legend_title_text='Parameter', hovermode="x unified")
+                        
+                        # ✅ TAMBAHKAN WATERMARK (OPSI 1)
+                        fig.add_annotation(
+                            text="© SLB ALSC - Confidential",
+                            xref="paper", yref="paper",
+                            x=0.99, y=0.01,  # Posisi: kanan bawah
+                            showarrow=False,
+                            font=dict(size=12, color="rgba(255,255,255,0.3)"),  # Semi-transparent
+                            xanchor="right", yanchor="bottom"
+                        )
+                        
                         st.plotly_chart(fig, use_container_width=True)
                 
                 # --- ISI DARI TAB 2 (TABEL) ---
