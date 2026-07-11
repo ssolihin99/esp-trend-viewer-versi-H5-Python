@@ -35,7 +35,7 @@ with st.sidebar:
     uploaded_file = st.file_uploader("Upload File .h5", type=['h5', 'hdf5'])
 
 # --- 4. TAMPILAN UTAMA ---
-st.title("📊 VSD & Pump Performance Dashboard")
+st.title("📊 H5 File Converter")
 st.markdown("---")
 
 tab1, tab2 = st.tabs(["📈 Analisis Grafik Interaktif", "🗃️ Data Tabel & Download"])
