@@ -149,7 +149,7 @@ if uploaded_file is not None:
                             xref="paper", yref="paper",
                             x=0.5, y=0.5,  # Posisi: kanan bawah
                             showarrow=False,
-                            font=dict(size=14, color="rgba(100,100,100)"),  # Semi-transparent
+                            font=dict(size=14, color="rgba(200,200,200)"),  # Semi-transparent
                             xanchor="center", yanchor="middle",
                             opacity=0.2
                         )
