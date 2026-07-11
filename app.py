@@ -145,11 +145,11 @@ if uploaded_file is not None:
                         
                         # ✅ TAMBAHKAN WATERMARK (OPSI 1)
                         fig.add_annotation(
-                            text="© SLB ALSC - Confidential",
+                            text="© ssolihin99@gmail.com",
                             xref="paper", yref="paper",
                             x=0.99, y=0.01,  # Posisi: kanan bawah
                             showarrow=False,
-                            font=dict(size=12, color="rgba(255,255,255,0.3)"),  # Semi-transparent
+                            font=dict(size=14, color="rgba(255,255,255,0.7)"),  # Semi-transparent
                             xanchor="right", yanchor="bottom"
                         )
                         
